@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Hello JavaScript Bootcamp</h1>
+  <ul>
+
+  </ul>
+  <button onclick="maths()" id="fsjs2">Submit</button>
+  <p id="js"></p>
+  <script>
+    const list =`<li>Rohit</li>
+    <li>Manas</li>
+    <li>Binod</li>
+    <li>Kunal</li>
+    <li>Vishal</li>
+    `;
+    const ul=document.querySelector("ul")
+    ul.innerHTML=list;
+
+    // Create Element on Screen
+    let title=document.createElement("h1")
+    title.className="title";
+    title.style.fontSize="25px";
+    title.style.color="green";
+    title.textContent="Creating New Element."
+
+    console.log(title);  //this line is written just to check whether the particular element is created or not `in the console`.
+    
+    // now we need to add the element inside the body of the HTML document 
+    document.body.appendChild(title);
+    // remove child do it by yourself....
+
+    // For Loop (how you can create an element using for Loop)
+    for(let i=0;i<3;i++){
+      let para= document.createElement("p")
+      para.className="fsjs"
+      para.style.fontSize="16px"
+      console.log(para)
+      para.textContent=i;
+      document.body.appendChild(para);
+    }
+
+  // creating the maths fuction
+  function maths(){
+    let value = prompt("Solve This 50-30");
+    if(value==20){
+      document.getElementById("js").innerText="Success Redirect";
+      document.getElementById("fsjs2").style.backgroundColor="green";
+    }
+    else{
+      document.getElementById("js").innerText="Failure Try Again";
+      document.getElementById("js").style.color="red";
+      document.getElementById("fsjs2").style.backgroundColor="red";
+    }
+  }
+
+  </script>
+</body>
+</html>
