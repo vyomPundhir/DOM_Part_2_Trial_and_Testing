@@ -7,32 +7,37 @@
   <title>Event Listener</title>
 </head>
 <body>
+  <!-- In the index.html file, when prompt is used , it is said that onclick to the button a fuction maths will be called.
+  Hence, the Event or the Action is click/onClick and after listening to the action or Event maths fuction is called.
+  this is all what happens in an eventListener.-->
   <h1>Learning Event Listener</h1>
   <p id="js">Event Listener</p>
 
   <script>
     // syntax to use eventListener
-    // document.addEventListener("Name of the event action", "Whom should I call")
+    // document.addEventListener("Name of the event action", "Whom should I call i.e. which function to be called")
     // document.addEventListener("click", Hello)
-    document.addEventListener("dblclick", Hello)
-    function Hello(){
+    document.addEventListener("dblclick", hello)
+    function hello(){
       document.getElementById("js").innerText="Mouse Clicked"
     }
-    /*
-    click
-    dblclick
-    mouseenter
-    mouseleave
-    moveover
-    input
-    keydown
-    keyup
-    keypress
-    onload
+    /*These are the EventListeners that are used mainly in DOM Manipulation:
+    -click
+    -dblclick
+    -mouseenter
+    -mouseleave
+    -mouseover
+    -input
+    -keydown
+    -keyup
+    -keypress
+    -onload
+
+    Explore all of these Event Listeners on your own 
     */
     document.addEventListener("mouseenter",Hello)
     function Hello(){
-      document.getElementsById("mouseenter,")
+      document.getElementById("js").innerText="Hello Mouse Entered"
     }
 
   </script>
