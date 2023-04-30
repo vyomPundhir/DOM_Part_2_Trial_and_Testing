@@ -8,24 +8,36 @@
 </head>
 <body>
   <h1>Hello JavaScript Bootcamp</h1>
-  <ul>
+  <ul id="ul">
 
   </ul>
+  <!-- creating a button -->
   <button onclick="maths()" id="fsjs2">Submit</button>
+  <!-- creating an empty paragraph with id "js"-->
   <p id="js"></p>
+
   <script>
+    // creating a variable named list in which a few list items are stored
     const list =`<li>Rohit</li>
     <li>Manas</li>
     <li>Binod</li>
     <li>Kunal</li>
     <li>Vishal</li>
     `;
+
+    // targeting the ul and saving it inside the variable ul
     const ul=document.querySelector("ul")
+
+    // list items stored inside list variable are provide inside the ul
     ul.innerHTML=list;
 
     // Create Element on Screen
+    // to create an element on screen we use "createElement("element name")"
     let title=document.createElement("h1")
+    // Adding className to the Element
     title.className="title";
+    
+    // Providing fontsize, color & textContent to the Element
     title.style.fontSize="25px";
     title.style.color="green";
     title.textContent="Creating New Element."
@@ -33,8 +45,15 @@
     console.log(title);  //this line is written just to check whether the particular element is created or not `in the console`.
     
     // now we need to add the element inside the body of the HTML document 
+    // append -> means adding to something at the end of it.
+    // hence, the child will be added at the end inside the body.
     document.body.appendChild(title);
-    // remove child do it by yourself....
+
+
+    // REMOVE CHILD METHOD
+    // document.body.removeChild(title);
+
+
 
     // For Loop (how you can create an element using for Loop)
     for(let i=0;i<3;i++){
